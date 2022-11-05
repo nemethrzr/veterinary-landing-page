@@ -1,0 +1,325 @@
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter";
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+.container > div:not(.nav) > div {
+  padding: 2rem 10rem;
+}
+
+.nav {
+  display: flex;
+  background-color: #eaad00;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.nav .navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 0 2rem;
+  font-size: 2.2rem;
+}
+.nav .navbar ul a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.nav .searchbox input {
+  background-color: #ffc500;
+  border: none;
+  font-size: 3rem;
+  padding: 0.5rem;
+}
+.nav .searchbox button {
+  background-color: #00c3cf;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  padding: 0.5rem 1rem;
+}
+
+.header .main-section {
+  background-color: #ffc500;
+  background-image: url("../images/header_image.png");
+  background-repeat: no-repeat;
+  background-position: right 10rem top 10rem;
+  height: 700px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.header .main-section h1 {
+  font-size: 4rem;
+}
+.header .main-section p {
+  font-size: 2rem;
+  width: 50%;
+}
+.header .main-section .btn {
+  margin: 0 1rem;
+}
+.header .secondary-section {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem inherit;
+  height: 700px;
+}
+.header .secondary-section h2 {
+  font-size: 3rem;
+}
+.header .secondary-section p {
+  font-size: 1.8rem;
+}
+.header .secondary-section .content {
+  width: 50%;
+}
+.header .secondary-section .image {
+  background-color: #ffc500;
+  position: relative;
+  z-index: 2;
+}
+.header .secondary-section .image img {
+  opacity: 0.5;
+}
+.header .secondary-section .image a {
+  position: absolute;
+  top: calc(50% - 5rem);
+  left: calc(50% - 1rem);
+  background-color: #fff;
+  font-size: 4rem;
+  padding: 1rem 2rem;
+  color: #000;
+  border-radius: 50%;
+}
+.header .secondary-section .image::after {
+  content: " ";
+  display: block;
+  background-color: #ffc500;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: -25px;
+  left: -25px;
+  z-index: -1;
+}
+
+.about .main-section {
+  background-color: #ffc500;
+  color: #fff;
+  text-align: center;
+}
+.about .main-section h2 {
+  font-size: 4rem;
+}
+.about .main-section h3 {
+  font-size: 3rem;
+}
+.about .main-section p {
+  font-size: 2rem;
+}
+.about .main-section .items {
+  display: flex;
+  gap: 2rem;
+  margin-top: 10rem;
+}
+.about .main-section .items .item img {
+  border: 8px solid #fff;
+}
+.about .main-section .items .item h3 {
+  text-transform: uppercase;
+}
+.about .main-section .items .item p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 350px;
+  height: 1.2em;
+  white-space: nowrap;
+}
+.about .secondary-section {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem inherit;
+  height: 700px;
+}
+.about .secondary-section h2 {
+  font-size: 3rem;
+}
+.about .secondary-section p {
+  font-size: 1.8rem;
+}
+.about .secondary-section .content {
+  width: 50%;
+}
+.about .secondary-section .image {
+  background-color: #ffc500;
+  position: relative;
+  z-index: 2;
+}
+.about .secondary-section .image img {
+  opacity: 0.5;
+}
+.about .secondary-section .image a {
+  position: absolute;
+  top: calc(50% - 5rem);
+  left: calc(50% - 1rem);
+  background-color: #fff;
+  font-size: 4rem;
+  padding: 1rem 2rem;
+  color: #000;
+  border-radius: 50%;
+}
+.about .secondary-section .image::after {
+  content: " ";
+  display: block;
+  background-color: #ffc500;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+  z-index: -1;
+}
+
+.service .main-section {
+  background-color: #ffc500;
+  color: #fff;
+  text-align: center;
+}
+.service .main-section h2 {
+  font-size: 4rem;
+}
+.service .main-section h3 {
+  font-size: 3rem;
+}
+.service .main-section p {
+  font-size: 2rem;
+}
+.service .main-section .items {
+  display: flex;
+  gap: 2rem;
+  margin-top: 10rem;
+}
+.service .main-section .items .item img {
+  border: 8px solid #fff;
+}
+.service .main-section .items .item h3 {
+  text-transform: uppercase;
+}
+.service .main-section .items .item p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 350px;
+  height: 1.2em;
+  white-space: nowrap;
+}
+.service .secondary-section {
+  text-align: center;
+}
+.service .secondary-section h2 {
+  font-size: 4rem;
+}
+.service .secondary-section h3 {
+  font-size: 3rem;
+}
+.service .secondary-section p {
+  font-size: 2rem;
+}
+.service .secondary-section .items {
+  display: flex;
+  gap: 2rem;
+  margin-top: 10rem;
+}
+.service .secondary-section .items .item img {
+  border: 8px solid #fff;
+}
+.service .secondary-section .items .item h3 {
+  text-transform: uppercase;
+}
+.service .secondary-section .items .item .social {
+  font-size: 2rem;
+}
+.service .secondary-section .items .item .social a {
+  color: #eaad00;
+  margin: 0 0.5rem;
+}
+
+.contact .main-section {
+  position: relative;
+  background: url("../images/bg1.png");
+  display: flex;
+  height: 530px;
+  justify-content: space-between;
+  align-items: center;
+  /* ::before{
+
+        content: '';
+        background-color: $secondary-color;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.05;
+        z-index: 1;
+    }*/
+}
+.contact .main-section .item {
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+}
+.btn {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  background: none;
+  color: #fff;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn.btn-primary {
+  background-color: #00c3cf;
+  border: 2px solid #00c3cf;
+}
+
+.btn.btn-secondary {
+  background-color: #ffc500;
+  color: #fff;
+}
+
+.btn.btn-primary:hover {
+  border: 2px solid #fff;
+}
+
+.btn.btn-secondary-outline {
+  border: 2px solid #fff;
+}
+
+.btn.btn-secondary-outline:hover {
+  border: 2px solid #00c3cf;
+  color: #00c3cf;
+}
+
+.btn.rounded {
+  border-radius: 30px;
+}/*# sourceMappingURL=style.css.map */
