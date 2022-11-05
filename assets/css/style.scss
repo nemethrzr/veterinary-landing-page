@@ -1,6 +1,7 @@
 @import 'colors';
 @import 'base';
 @import 'animations';
+@import 'media';
 
 .container {
     max-width: 1400px;
@@ -42,7 +43,20 @@
         border: none;
         font-size: 2rem;
         padding: 1.5rem;
+        padding-right: 6.5rem;
+        color: $secondary-font-color;
+        outline: none;
+    }
+    input:focus{
+       outline: 2px solid $primary-color;
         
+        
+    }
+    input:focus-visible{
+       
+    }
+    input:active{
+       
     }
     button {
         background-color: $primary-color;
@@ -52,7 +66,7 @@
         padding: 1rem;
         position: relative;
         top: 3px;
-        left: -3px;
+        left: calc(-5rem - 2px  );
         
     }
 }
@@ -142,6 +156,7 @@
             flex-wrap: wrap;
             gap: 2rem;
             margin-top: 10rem;
+            justify-content: center;
 
             .item {
                 img {
@@ -224,6 +239,7 @@
             flex-wrap: wrap;
             gap: 2rem;
             margin-top: 10rem;
+            justify-content: center;
 
             .item {
                 img {
@@ -250,6 +266,7 @@
             flex-wrap: wrap;
             gap: 2rem;
             margin-top: 5rem;
+            justify-content: center;
 
             .item {
                 img {
@@ -275,7 +292,11 @@
 .contact {
     .main-section {
         position: relative;
-        background: url("../images/bg1.png");
+        
+        $secondary-color: #ffc40060;
+        
+        background:  linear-gradient($secondary-color,$secondary-color),url("../images/bg1.png"),;
+        
         display: flex;
         flex-wrap: wrap;
         gap: 2rem 10rem;
@@ -290,7 +311,7 @@
             i {
             }
         }
-        /* ::before{
+       /* ::before{
 
             content: '';
             background-color: $secondary-color;
@@ -313,19 +334,22 @@
         
         .posts {
             display: flex;
-            
-            
-            gap: 0 4rem;
+            gap: 4rem;
             margin-top: 10rem;
+            flex-wrap: wrap;
+            justify-content: center;
             .post {
                 
-
-                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.158);
+                width: 350px;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.058);
+                h3{
+                    padding: 0;
+                }
                 img {
                    width: 100%;
                 }
                 .description {
-                    padding: 1rem;
+                    padding: 0 4rem 4rem 4rem;
                    /* border-left: 1px solid black;
                     border-bottom: 1px solid black;
                     border-right: 1px solid black;*/

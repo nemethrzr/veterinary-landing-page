@@ -1,0 +1,80 @@
+@media only screen and (max-width: 950px) {
+}
+
+@media only screen and (max-width: 1000px) {
+}
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+    .container {
+        > div:not(.nav) > div {
+            padding: 1rem 2rem !important;
+        }
+    }
+    .nav {
+        .navbar {
+            display: none;
+        }
+        .searchbox {
+            display: none;
+        }
+    }
+
+    .header {
+        .main-section {
+            background-position: right -10rem top 10rem !important;
+            .header-content {
+                $primary-bg-color: #31313150;
+                background-color: $primary-bg-color;
+                padding: 1rem;
+            }
+        }
+        p {
+            width: unset !important;
+        }
+        .secondary-section {
+            .content{
+                width: 100% !important;
+            }
+            .image{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+                margin-bottom: 5rem;
+            }
+        }
+    }
+    .about{
+        .secondary-section {
+            .content{
+                width: 100% !important;
+            }
+            .image{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+                margin-bottom: 5rem;
+            }
+        }
+    }
+    .footer{
+        .column:nth-child(3){
+            h2,p{
+                text-align: left;
+            }
+            .subscription-box{
+                button{
+                  top: -53px;  
+                  left: 0px;
+                  
+                }
+            }
+        }
+    }
+}

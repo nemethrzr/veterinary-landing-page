@@ -48,14 +48,17 @@ p {
 .btn.btn-primary {
   background-color: #00c3cf;
   border: 2px solid #00c3cf;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn.btn-primary:hover {
   border: 2px solid #fff;
   background-color: transparent;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn.btn-secondary {
+  border: 2px solid #ffc500;
   background-color: #ffc500;
   color: #fff;
 }
@@ -88,15 +91,81 @@ a:hover {
   text-underline-offset: 0.5rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .posts .post {
   transition: all 0.2s ease-in-out;
 }
 .posts .post:hover {
   transform: scale(1.05);
-  box-shadow: 5px 5px 15px black !important;
+  box-shadow: 2px 2px 5px rgb(175, 170, 170) !important;
   transition: all 0.2s ease-in-out;
 }
 
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  .container > div:not(.nav) > div {
+    padding: 1rem 2rem !important;
+  }
+  .nav .navbar {
+    display: none;
+  }
+  .nav .searchbox, .nav .subscription-box {
+    display: none;
+  }
+  .header .main-section {
+    background-position: right -10rem top 10rem !important;
+  }
+  .header .main-section .header-content {
+    background-color: rgba(49, 49, 49, 0.3137254902);
+    padding: 1rem;
+  }
+  .header p {
+    width: unset !important;
+  }
+  .header .secondary-section .content {
+    width: 100% !important;
+  }
+  .header .secondary-section .image {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  .header .secondary-section .image img {
+    width: 100%;
+  }
+  .about .secondary-section .content {
+    width: 100% !important;
+  }
+  .about .secondary-section .image {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  .about .secondary-section .image img {
+    width: 100%;
+  }
+  .footer .column:nth-child(3) h2, .footer .column:nth-child(3) p {
+    text-align: left;
+  }
+  .footer .column:nth-child(3) .subscription-box button {
+    top: -53px;
+    left: 0px;
+  }
+}
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -130,6 +199,12 @@ a:hover {
   border: none;
   font-size: 2rem;
   padding: 1.5rem;
+  padding-right: 6.5rem;
+  color: #fff;
+  outline: none;
+}
+.searchbox input:focus, .subscription-box input:focus {
+  outline: 2px solid #00c3cf;
 }
 .searchbox button, .subscription-box button {
   background-color: #00c3cf;
@@ -139,7 +214,7 @@ a:hover {
   padding: 1rem;
   position: relative;
   top: 3px;
-  left: -3px;
+  left: calc(-5rem - 2px);
 }
 
 .header .main-section {
@@ -218,6 +293,7 @@ a:hover {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 10rem;
+  justify-content: center;
 }
 .about .main-section .items .item img {
   border: 8px solid #fff;
@@ -291,6 +367,7 @@ a:hover {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 10rem;
+  justify-content: center;
 }
 .service .main-section .items .item img {
   border: 8px solid #fff;
@@ -312,6 +389,7 @@ a:hover {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 5rem;
+  justify-content: center;
 }
 .service .secondary-section .items .item img {
   border: 8px solid #fff;
@@ -329,7 +407,7 @@ a:hover {
 
 .contact .main-section {
   position: relative;
-  background: url("../images/bg1.png");
+  background: linear-gradient(rgba(255, 196, 0, 0.3764705882), rgba(255, 196, 0, 0.3764705882)), url("../images/bg1.png");
   display: flex;
   flex-wrap: wrap;
   gap: 2rem 10rem;
@@ -338,16 +416,16 @@ a:hover {
   align-items: center;
   /* ::before{
 
-      content: '';
-      background-color: $secondary-color;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.05;
-      z-index: 1;
-  }*/
+       content: '';
+       background-color: $secondary-color;
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       top: 0;
+       left: 0;
+       opacity: 0.05;
+       z-index: 1;
+   }*/
 }
 .contact .main-section .item {
   font-size: 5rem;
@@ -364,17 +442,23 @@ a:hover {
 }
 .contact .secondary-section .posts {
   display: flex;
-  gap: 0 4rem;
+  gap: 4rem;
   margin-top: 10rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .contact .secondary-section .posts .post {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.158);
+  width: 350px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.058);
+}
+.contact .secondary-section .posts .post h3 {
+  padding: 0;
 }
 .contact .secondary-section .posts .post img {
   width: 100%;
 }
 .contact .secondary-section .posts .post .description {
-  padding: 1rem;
+  padding: 0 4rem 4rem 4rem;
   /* border-left: 1px solid black;
    border-bottom: 1px solid black;
    border-right: 1px solid black;*/
